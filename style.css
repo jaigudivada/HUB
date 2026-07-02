@@ -105,6 +105,19 @@ body {
     gap: 0.75rem;
 }
 
+/* Sub-section within Resources */
+.sub-section {
+    margin-top: 1.5rem;
+}
+
+.sub-section-title {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    letter-spacing: 0.03em;
+    margin-bottom: 0.75rem;
+}
+
 /* Link Row Card */
 .link-row {
     display: flex;

@@ -13,6 +13,9 @@ const data = {
         { name: "LinkedIn", url: "https://www.linkedin.com/in/jai-manikanta-gudivada/" },
         { name: "GitHub", url: "https://github.com/jaigudivada" },
         { name: "Email", url: "mailto:thejaiverse@gmail.com" },
+    ],
+    gfgCourses: [
+        { name: "Build with AI agents using Snowflake Cortex AI", url: "https://gfgcdn.com/tu/wD5/" }
     ]
 };
 
@@ -57,6 +60,12 @@ function initializeLinks() {
     // Inject Social Links
     data.socialLinks.forEach(socialLink => {
         socialLinksContainer.appendChild(createLinkElement(socialLink));
+    });
+
+    // Inject GFG Courses
+    const gfgCoursesContainer = document.getElementById('gfg-courses-container');
+    data.gfgCourses.forEach(course => {
+        gfgCoursesContainer.appendChild(createLinkElement(course));
     });
 }
 
