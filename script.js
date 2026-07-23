@@ -15,7 +15,8 @@ const data = {
         { name: "Email", url: "mailto:thejaiverse@gmail.com" },
     ],
     gfgCourses: [
-        { name: "Build with AI agents using Snowflake Cortex AI", url: "https://gfgcdn.com/tu/wD5/" }
+        { name: "Build with AI agents using Snowflake Cortex AI", url: "https://gfgcdn.com/tu/wD5/" },
+        { name: "MongoDB Course", url: "https://gfgcdn.com/tu/10XE/" }
     ]
 };
 
