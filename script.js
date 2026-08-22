@@ -17,6 +17,9 @@ const data = {
     gfgCourses: [
         { name: "Build with AI agents using Snowflake Cortex AI", url: "https://gfgcdn.com/tu/wD5/" },
         { name: "MongoDB Course", url: "https://gfgcdn.com/tu/10XE/" }
+    ],
+    unstop: [
+        { name: "Check your skill with this game", url: "https://unstop.com/mario_game" },
     ]
 };
 
@@ -67,6 +70,12 @@ function initializeLinks() {
     const gfgCoursesContainer = document.getElementById('gfg-courses-container');
     data.gfgCourses.forEach(course => {
         gfgCoursesContainer.appendChild(createLinkElement(course));
+    });
+
+    // Inject Unstop
+    const unstopContainer = document.getElementById('unstop-container');
+    data.unstop.forEach(link => {
+        unstopContainer.appendChild(createLinkElement(link));
     });
 }
 
