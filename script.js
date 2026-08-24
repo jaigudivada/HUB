@@ -20,6 +20,7 @@ const data = {
     ],
     unstop: [
         { name: "Check your skill with this game", url: "https://unstop.com/mario_game" },
+        { name: "Mock tests", url: "https://unstop.com/practice/mock-test" }
     ]
 };
 
