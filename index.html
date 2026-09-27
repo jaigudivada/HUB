@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,55 +9,115 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="top-nav">
+    <!-- Instagram Follow Popup -->
+    <div class="popup-overlay" id="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+        <div class="popup" role="document">
+            <button class="popup-close" id="popup-close" aria-label="Dismiss">&times;</button>
+            <div class="popup-content">
+                <div class="popup-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                </div>
+                <h2 id="popup-title" class="popup-title">Follow Jai Verse</h2>
+                <p class="popup-description">Stay updated with latest projects, resources & content</p>
+                <div class="popup-handle">
+                    <span class="handle-label">Instagram</span>
+                    <span class="handle-value">@_jai_verse</span>
+                </div>
+                <div class="popup-actions">
+                    <a href="https://instagram.com/_jai_verse" target="_blank" rel="noopener noreferrer" class="popup-btn popup-btn-primary">Open Instagram</a>
+                    <button class="popup-btn popup-btn-secondary" id="popup-dismiss">Maybe later</button>
+                </div>
+                <label class="popup-dont-show">
+                    <input type="checkbox" id="popup-dont-show-checkbox">
+                    <span>Don't show again</span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <nav class="top-nav" role="navigation" aria-label="Main navigation">
         <div class="nav-content">
-            <span class="nav-logo">JAI VERSE HUB</span>
+            <a href="#" class="nav-logo" aria-label="JAI VERSE HUB home">
+                <img src="favicon.svg" alt="" class="logo-mark" aria-hidden="true">
+                <span class="logo-text">JAI VERSE</span>
+            </a>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" aria-pressed="false">
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
         </div>
     </nav>
-    <main class="container">
-        <section class="hero fade-in">
-            <h1 class="hero-title">JAI VERSE HUB</h1>
-            <h2 class="hero-subtitle">Projects, resources and links.</h2>
-            <p class="hero-description">Everything mentioned in my videos and content in one place.</p>
+
+    <main class="container" role="main">
+        <section class="hero fade-in" aria-labelledby="hero-title">
+            <h1 id="hero-title" class="hero-title">JAI VERSE <span class="hero-accent">HUB</span></h1>
+            <h2 class="hero-subtitle">Projects, resources & links</h2>
+            <p class="hero-description">Everything mentioned in my videos and content — curated in one place.</p>
         </section>
-        
-        <section class="links-section fade-in" id="projects-section">
-            <h3 class="section-title">Projects</h3>
-            <div class="links-container" id="projects-container">
+
+        <section class="links-section fade-in" id="projects-section" aria-labelledby="projects-title">
+            <header class="section-header">
+                <h3 id="projects-title" class="section-title">Projects</h3>
+            </header>
+            <div class="links-container" id="projects-container" role="list">
                 <!-- Projects injected by JS -->
             </div>
         </section>
 
-        <section class="links-section fade-in" id="social-links-section">
-            <h3 class="section-title">Links</h3>
-            <div class="links-container" id="social-links-container">
+        <section class="links-section fade-in" id="social-links-section" aria-labelledby="social-title">
+            <header class="section-header">
+                <h3 id="social-title" class="section-title">Connect</h3>
+            </header>
+            <div class="links-container" id="social-links-container" role="list">
                 <!-- Links injected by JS -->
             </div>
         </section>
 
-        <section class="links-section fade-in" id="resources-section">
-            <h3 class="section-title">Resources</h3>
-            <div class="sub-section">
-                <h4 class="sub-section-title">Geeks for Geeks courses</h4>
-                <div class="links-container" id="gfg-courses-container">
+        <section class="links-section fade-in" id="resources-section" aria-labelledby="resources-title">
+            <header class="section-header">
+                <h3 id="resources-title" class="section-title">Resources</h3>
+            </header>
+
+            <div class="sub-section" id="gfg-section">
+                <h4 class="sub-section-title">GeeksforGeeks Courses</h4>
+                <div class="links-container" id="gfg-courses-container" role="list">
                     <!-- GFG courses injected by JS -->
                 </div>
             </div>
-            <div class="sub-section">
+
+            <div class="sub-section" id="unstop-section">
                 <h4 class="sub-section-title">Unstop</h4>
-                <div class="links-container" id="unstop-container">
+                <div class="links-container" id="unstop-container" role="list">
                     <!-- Unstop links injected by JS -->
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer fade-in">
-        <p>A JAI VERSE Product.</p>
-        <p>© 2026 Jai Gudivada. JAI VERSE HUB. All Rights Reserved.</p>
+    <footer class="footer fade-in" role="contentinfo">
+        <div class="footer-content">
+            <p class="footer-brand">A <span class="brand-highlight">JAI VERSE</span> Product.</p>
+            <p class="footer-copyright">© 2026 Jai Gudivada. All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
